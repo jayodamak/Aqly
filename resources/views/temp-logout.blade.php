@@ -1,4 +1,6 @@
-{{-- <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<x-guest-layout>
+
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -216,98 +218,6 @@
             </div>
         </div>
     </div>
-</nav> --}}
+</nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- Header Section Begin -->
- <header class="header"  >
-
-    <div class="container" >
-        <div class="row">
-            <div class="col-lg-3 col-md-3">
-                <div class="header__logo">
-                <a href="/"><h1 style="color: black; font-size: 100%; font-family: 'Judson'">AQLY</h1></a>
-
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
-                <nav class="header__menu mobile-menu">
-                    <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="./shop.html">Shop</a></li>
-                        <li><a href="#">Pages</a>
-                            <ul class="dropdown">
-                                <li><a href="./about.html">About Us</a></li>
-                                <li><a href="./shop-details.html">Shop Details</a></li>
-                                <li><a href="./shopping-cart.html">Shopping Cart</a></li>
-                                <li><a href="./checkout.html">Check Out</a></li>
-                                <li><a href="./blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./contact.html">Contacts</a></li>
-                        <li>  @if (Route::has('login'))
-            <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                @auth
-                    {{-- <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"><p id="aa">Hi, {{Auth::user()->name}}</p></a> --}}
-                    <a href="/temp-logout" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"><p id="aa">Hi, {{Auth::user()->name}}</p></a>
-
-                @else
-                    <!-- <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a> -->
-
-                    @if (Route::has('register'))
-                        <a style="color: #e53637;" href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sign up</a>
-                    @endif
-                @endauth
-            </div>
-        @endif</li>
-
-
-
-                    </ul>
-                </nav>
-            </div>
-            <div class="col-lg-3 col-md-3">
-                <div class="header__nav__option">
-
-
-
-
-
-
-                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                    <a href="#"><img src="img/icon/cart.png" alt="" style="width: 20px;"> </a>
-                    <!-- <a href="#"><img src="img/icon/a.png" alt="" style="width: 20px;"></a> -->
-
-                </div>
-
-            </div>
-        </div>
-        <div class="canvas__open"><i class="fa fa-bars"></i></div>
-    </div>
-</header>
-<!-- Header Section End -->
+</x-guest-layout>

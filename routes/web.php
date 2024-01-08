@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/temp-logout', function () {
+    return view('temp-logout');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
